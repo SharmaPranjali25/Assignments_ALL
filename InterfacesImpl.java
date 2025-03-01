@@ -88,7 +88,7 @@ private static boolean isValidPassword(String password) {
     }
 }
 
-// Step 3: Implement the Interface
+
 class UserServiceImpl implements UserService {
   
     private List<User> users = new ArrayList<>();
