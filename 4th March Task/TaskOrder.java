@@ -129,6 +129,16 @@ public class TaskOrder {
 		System.out.println("Quantity: "+orderData.getQty());
 		
 	}
+	//4 monthly  average spending
+	public static void getMonthlyAverageSpending(List<Order> orderList) {
+        Map<String, Double> monthlyAvgSpending = orderList.stream()
+            .collect(Collectors.groupingBy(Order::getMonth, 
+                Collectors.averagingDouble(order -> order.getPrice() * order.getQty())));
+        
+        monthlyAvgSpending.forEach((month, avgSpending) -> 
+            System.out.println("Month: " + month + "  Average Spending: " + avgSpending));
+    }
+    
 	
 	//5 minimum order price among all orders
 	public static void minPrice(List<Order> OrderList) {
@@ -181,7 +191,7 @@ public class TaskOrder {
 		TaskOrder.getHighestOrder(orderList); //1
 		TaskOrder.getCountOfOrder(orderList); //2
 		TaskOrder.maxPrice(orderList); //3
-		
+		TaskOrder.getMonthlyAverageSpending(orderList); //4
 		TaskOrder.minPrice(orderList); //5
 		TaskOrder.getFirstOrder(orderList); //6
 		
