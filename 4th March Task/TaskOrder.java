@@ -104,6 +104,7 @@ public class TaskOrder {
 		o1.getQty()>o2.getQty()?o1:o2));
 		highestorder.forEach((yearoforder ,Order)->System.out.println("Year-of-Order:"+ yearoforder+ "  Category: "+Order.getCategory()+ "  "
 				+ "Quantity:"+ Order.getQty()));
+		System.out.println("-----------------------------------------------------------------------------------------");
 
 }
 	//2. category-wise order count
