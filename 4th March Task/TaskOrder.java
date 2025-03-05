@@ -113,6 +113,7 @@ public class TaskOrder {
 				               .collect(Collectors.groupingBy(Order::getCategory, 
 				            		   Collectors.counting()));
 		System.out.println(result);
+		System.out.println("-----------------------------------------------------------------------------------------");
 		
 		
 	}
@@ -127,6 +128,7 @@ public class TaskOrder {
 		System.out.println("Name: "+orderData.getCategory());
 		System.out.println("Price: "+orderData.getPrice());
 		System.out.println("Quantity: "+orderData.getQty());
+		System.out.println("---------------------------------------------------------------------");
 		
 	}
 	//4 monthly  average spending
@@ -137,6 +139,7 @@ public class TaskOrder {
         
         monthlyAvgSpending.forEach((month, avgSpending) -> 
             System.out.println("Month: " + month + "  Average Spending: " + avgSpending));
+        System.out.println("---------------------------------------------------------------------");
     }
     
 	
@@ -149,6 +152,7 @@ public class TaskOrder {
 		System.out.println("Name: "+orderData.getCategory());
 		System.out.println("Price: "+orderData.getPrice());
 		System.out.println("Quantity: "+orderData.getQty());
+		System.out.println("---------------------------------------------------------------------");
 		
 	}
 	
@@ -160,19 +164,14 @@ public class TaskOrder {
                  .findFirst();
 		Order orderData= firstorder.get();
 		System.out.println("First Puchased Order: ");
-		System.out.println("=======================");
+		
 		System.out.println("Name: "+ orderData.getCategory());
 		System.out.println("Year of Order: "+ orderData.getYearoforder());
+		System.out.println("---------------------------------------------------------------------");
 
 
 		
 	}
-	
-	
-	
-	
-	
-		
 	
 	
 	public static void main(String[] args) {
